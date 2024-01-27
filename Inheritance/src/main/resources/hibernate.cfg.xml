@@ -25,5 +25,16 @@
         <property name="hibernate.dbcp.maxIdle">10</property>
         <property name="hibernate.dbcp.minIdle">5</property>
         <property name="hibernate.dbcp.maxWaitMillis">-1</property>
+<!--        <mapping class="com.tutorial.hibernate.Inheritance.mapped.superclass.PermanentEmployeeEntity" />-->
+<!--        <mapping class="com.tutorial.hibernate.Inheritance.mapped.superclass.ContractEmployeeEntity" />-->
+
+<!--        <mapping class="com.tutorial.hibernate.Inheritance.single.table.PenEntity" />-->
+<!--        <mapping class="com.tutorial.hibernate.Inheritance.single.table.BookEntity" />-->
+
+<!--        <mapping class="com.tutorial.hibernate.Inheritance.table.perclass.PenEntity" />-->
+<!--        <mapping class="com.tutorial.hibernate.Inheritance.table.perclass.BookEntity" />-->
+
+        <mapping class="com.tutorial.hibernate.Inheritance.joined.PenEntity" />
+        <mapping class="com.tutorial.hibernate.Inheritance.joined.BookEntity" />
     </session-factory>
 </hibernate-configuration>
