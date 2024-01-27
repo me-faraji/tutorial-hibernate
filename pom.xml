@@ -8,6 +8,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>h2</module>
+    <module>immutable</module>
   </modules>
 
   <properties>

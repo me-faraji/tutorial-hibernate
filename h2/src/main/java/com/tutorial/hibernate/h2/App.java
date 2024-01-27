@@ -1,5 +1,4 @@
 package com.tutorial.hibernate.h2;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import java.io.Serializable;
@@ -17,7 +16,7 @@ public class App {
 
     private static Serializable save(ProfileEntity profile) {
         Transaction trx = null;
-        try(Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try(Session session = ConnectionUtil.getSessionFactory().openSession()) {
             trx = session.beginTransaction();
             Serializable id = session.save(profile);
             trx.commit();
