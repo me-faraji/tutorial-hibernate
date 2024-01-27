@@ -1,9 +1,6 @@
 package com.tutorial.hibernate.Inheritance.mapped.superclass;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +13,8 @@ import java.util.Date;
 @NoArgsConstructor
 @Getter
 @Setter
-public class ContractEmployee extends Employee<ContractEmployee, Long> {
+@Builder
+public class ContractEmployeeEntity extends EmployeeEntity<ContractEmployeeEntity, Long, Long> {
     @Column(name = "start_date", nullable = false)
     private Date startDate;
     @Column(name = "end_date", nullable = false)

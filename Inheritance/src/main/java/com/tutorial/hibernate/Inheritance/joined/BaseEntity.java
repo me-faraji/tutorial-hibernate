@@ -1,6 +1,9 @@
-package com.tutorial.hibernate.Inheritance.mapped.superclass;
+package com.tutorial.hibernate.Inheritance.joined;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,6 +15,7 @@ import java.util.Date;
 @Getter
 @Setter
 public class BaseEntity<E, U> {
+
     @Column(name = "created_by", nullable = false)
     private U createdBy;
     @Column(name = "created_on", nullable = false)
