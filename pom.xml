@@ -9,6 +9,7 @@
   <modules>
     <module>h2</module>
     <module>immutable</module>
+      <module>Inheritance</module>
   </modules>
 
   <properties>
