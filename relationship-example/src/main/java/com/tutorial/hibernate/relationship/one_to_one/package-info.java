@@ -1,0 +1,1 @@
+package com.tutorial.hibernate.relationship.one_to_one;
