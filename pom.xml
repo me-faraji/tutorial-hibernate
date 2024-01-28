@@ -10,6 +10,7 @@
     <module>h2</module>
     <module>immutable</module>
       <module>Inheritance</module>
+      <module>relationship-example</module>
   </modules>
 
   <properties>
