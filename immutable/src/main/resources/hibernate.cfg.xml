@@ -1,30 +1,35 @@
-<!DOCTYPE hibernate-configuration PUBLIC
-        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+        <!--
+          ~ Hibernate, Relational Persistence for Idiomatic Java
+          ~
+          ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+          ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+          -->
+        <!DOCTYPE hibernate-configuration PUBLIC
+                "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
 <hibernate-configuration>
-    <session-factory>
-        <!-- JDBC Database connection settings -->
-        <property name="connection.driver_class">org.h2.Driver</property>
-        <property name="connection.url">jdbc:h2:mem:test</property>
-        <property name="connection.username">sa</property>
-        <property name="connection.password"></property>
-        
-        <!-- JDBC connection pool settings ... using built-in test pool -->
-        <property name="connection.pool_size">10</property>
-        <!-- Select our SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
-        <!-- Echo the SQL to stdout -->
-        <property name="show_sql">true</property>
-        <!-- Set the current session context -->
-        <property name="current_session_context_class">thread</property>
-        <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">create-drop</property>
-        <!-- dbcp connection pool configuration -->
-        <property name="hibernate.dbcp.initialSize">5</property>
-        <property name="hibernate.dbcp.maxTotal">20</property>
-        <property name="hibernate.dbcp.maxIdle">10</property>
-        <property name="hibernate.dbcp.minIdle">5</property>
-        <property name="hibernate.dbcp.maxWaitMillis">-1</property>
-        <mapping class="com.tutorial.hibernate.immutable.ProfileEntity" />
-    </session-factory>
+<session-factory>
+
+    <property name="connection.url">jdbc:postgresql://localhost/tutorial</property> <!-- BD Mane -->
+    <property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+    <property name="connection.username">postgres</property> <!-- DB User -->
+    <property name="connection.password">dev</property> <!-- DB Password -->
+
+    <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect -->
+    <property name="hbm2ddl.auto">update</property> <!-- create / create-drop / update -->
+
+    <property name="show_sql">true</property> <!-- Show SQL in console -->
+    <property name="format_sql">true</property> <!-- Show SQL formatted -->
+    <!-- dbcp connection pool configuration -->
+    <property name="hibernate.dbcp.initialSize">5</property>
+    <property name="hibernate.dbcp.maxTotal">20</property>
+    <property name="hibernate.dbcp.maxIdle">10</property>
+    <property name="hibernate.dbcp.minIdle">5</property>
+    <property name="hibernate.dbcp.maxWaitMillis">-1</property>
+
+    <mapping class="com.tutorial.hibernate.immutable.CompanyEntity" />
+    <mapping class="com.tutorial.hibernate.immutable.ProductEntity" />
+
+</session-factory>
 </hibernate-configuration>
