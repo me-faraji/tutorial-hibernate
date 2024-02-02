@@ -22,18 +22,18 @@
         <property name="show_sql">true</property> <!-- Show SQL in console -->
         <property name="format_sql">true</property> <!-- Show SQL formatted -->
 
-        <!--        <mapping class="com.tutorial.hibernate.relationship.one_to_one.foreign_key.UserEntity" />-->
-        <!--        <mapping class="com.tutorial.hibernate.relationship.one_to_one.foreign_key.AddressEntity" />-->
+        <!-- dbcp connection pool configuration -->
+        <property name="hibernate.dbcp.initialSize">30</property>
+        <property name="hibernate.dbcp.maxTotal">30</property>
+        <property name="hibernate.dbcp.maxIdle">20</property>
+        <property name="hibernate.dbcp.minIdle">10</property>
+        <property name="hibernate.dbcp.maxWaitMillis">-1</property>
 
-        <!--        <mapping class="com.tutorial.hibernate.relationship.one_to_one.shared_primary_kay.UserEntity" />-->
-        <!--        <mapping class="com.tutorial.hibernate.relationship.one_to_one.shared_primary_kay.AddressEntity" />-->
+        <mapping class="com.tutorial.hibernate.lock.optimistic.PersonEntity"/>
+        <mapping class="com.tutorial.hibernate.lock.optimistic.OrderEntity"/>
 
-        <!--        <mapping class="com.tutorial.hibernate.relationship.one_to_one.join_table.UserEntity" />-->
-        <!--        <mapping class="com.tutorial.hibernate.relationship.one_to_one.join_table.AddressEntity" />-->
-
-        <mapping class="com.tutorial.hibernate.relationship.one_to_many.PersonEntity"/>
-        <mapping class="com.tutorial.hibernate.relationship.one_to_many.OrderEntity"/>
-        <mapping class="com.tutorial.hibernate.relationship.one_to_many.OrderItemEntity"/>
+        <mapping class="com.tutorial.hibernate.lock.pessimistic.PersonEntity"/>
+        <mapping class="com.tutorial.hibernate.lock.pessimistic.OrderEntity"/>
 
     </session-factory>
 </hibernate-configuration>

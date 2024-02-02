@@ -10,12 +10,12 @@ import java.io.Serializable;
 
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Entity
-@Table(name = "tb_product")
+@Table(name = "inheritance_tb_product")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class ProductEntity<E, T, U> extends BaseEntity<E, U> {
+public class ProductEntity<E, T extends Serializable, U> extends BaseEntity<E, U> {
 
     @Id
     @Column(name = "id", nullable = false)

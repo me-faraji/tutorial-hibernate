@@ -8,7 +8,7 @@ import javax.persistence.MapKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_pen")
+@Table(name = "inheritance_tb_pen")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_book")
+@Table(name = "inheritance_tb_book")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
