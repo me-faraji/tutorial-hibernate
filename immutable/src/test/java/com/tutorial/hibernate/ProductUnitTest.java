@@ -50,6 +50,19 @@ public class ProductUnitTest {
     }
 
     @Test
+    public void deleteUnitTest() {
+        Transaction trx = null;
+        try (Session session = ConnectionUtil.getSessionFactory().openSession()) {
+            trx = session.beginTransaction();
+            session.delete(session.get(ProductEntity.class, product1));
+            trx.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            trx.rollback();
+        }
+    }
+
+    @Test
     public void getUnitTest() {
         ExecutorService es = Executors.newFixedThreadPool(2);
         try {
