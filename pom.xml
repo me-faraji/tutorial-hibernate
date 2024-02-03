@@ -12,6 +12,7 @@
       <module>Inheritance</module>
       <module>relationship-example</module>
       <module>lock</module>
+      <module>event</module>
   </modules>
 
   <properties>
